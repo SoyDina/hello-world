@@ -57,6 +57,5 @@ function animar(){
 }
 
 
-var initial_commit;
 animar();
 
