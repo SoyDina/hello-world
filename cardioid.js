@@ -23,13 +23,12 @@ function cardioide(factor, d, offset){
 	ctx.translate(ancho/2 + offset, alto/2 + offset);
 	for (var i = 1; i <= 1/d; i++) {
 		ctx.beginPath();
-		ctx.rotate(2 * Math.PI * d * (i-1));
+		ctx.rotate(2 * Math.PI * d * i);
 		ctx.moveTo(-radio,0);
-		ctx.rotate( 2*Math.PI * d * i * factor);
+		ctx.rotate(-2 * Math.PI * d * i);
+		ctx.rotate(2 * Math.PI * d * i * factor);
 		ctx.lineTo(-radio,0);
-		ctx.rotate(-2* Math.PI * d * i * factor);
-		ctx.moveTo(radio,0);
-		ctx.rotate(-2 * Math.PI * d * (i-1));
+		ctx.rotate(-2 * Math.PI * d * i * factor);
 		ctx.strokeStyle = 'rgba(255,'+azul.toString()+','+rojo.toString()+',1)';
 		ctx.stroke();
 	}
@@ -39,7 +38,7 @@ function cardioide(factor, d, offset){
 
 
 
-var d = 1/250;
+var d = 1/300;
 var factor = document.getElementById("factor").value;
 var vel = document.getElementById("velocidad").value;
 console.log(factor, vel)
