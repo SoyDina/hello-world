@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Tomás Di Nápoli</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
-</head>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Tomás Di Nápoli</title>
+    <LINK href="styles.css" rel="stylesheet" type="text/css">
+  </head>
 
-<body>
+  <body>
 
-  <!--header-->
-  <div id="headerWrapper">
-    <header id="header">
-      <div class="Wrapper">
-        <div id="logo">
-          <h1>Tomás Di Nápoli</h1>
+    <header>
+      <div class="container">
+        <h1 class="logo">página de Dina</h1>
+      </div>
+    </header>
+
+    <div class="texto">
+      <p>Hola! Soy Tomás Di Nápoli, mejor conocido como "Dina", bienvenide a mi (intento de) página web.</p>
+
+      <div class="numCont">
+        <div id="factorDiv">
+          <label for="factor" style="font: 20px Jazz">Factor: </label>
+          <input type="number" min="-9999" max="9999" value="1" step="1" id="factor" name="factor"> 
+        </div>
+        <div id="velocidadDiv">
+          <label for="velocidad" style="font: 20px Jazz;">Velocidad:</label>
+          <input type="range" min="-0.05" max="0.05" value="0" step="0.0001" id="velocidad" name="velocidad" class="slider"> 
         </div>
       </div>
-    </header> 
+      <div id="canvasDiv">
+        <canvas id="Cardioide_animación" width="500" height="500"></canvas>
+        <script src="cardioid.js"></script>
+      </div>
+    </div>
 
-  </div>
-
-<img src="images/yo.png" id="yo" alt="yo-png" />
-
-<p>Hola! Soy Tomás Di Nápoli, mejor conocido como "Dina", bienvenide a mi página web</p>
-
-<h1> Este es mi primer intento en hacer una página web</h1>
-<p> a ver que pasa si escribo acá</p>
-
-
-</body>
+  </body>
 </html>
