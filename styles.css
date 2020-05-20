@@ -41,7 +41,17 @@ body{
   background-color: beige;
 }
 
-#canvasDiv{
+#cardioide_animacionDiv{
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 500px;
+  height: 500px;
+}
+
+#cadioide_explicacionDiv{
   padding-left: 0;
   padding-right: 0;
   margin-left: auto;

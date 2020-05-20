@@ -1,4 +1,4 @@
-var canvas = document.querySelector('canvas');
+var canvas = document.getElementById('cardioide_animacion');
 var ctx = canvas.getContext('2d');
 
 var ancho = canvas.width;
@@ -30,10 +30,10 @@ function cardioide(factor, d, offset){
 		ctx.lineTo(-radio,0);
 		ctx.rotate(-2 * Math.PI * d * i * factor);
 		ctx.strokeStyle = 'rgba(255,'+azul.toString()+','+rojo.toString()+',1)';
+		ctx.lineWidth = 1.2;
 		ctx.stroke();
 	}
 	ctx.translate(-ancho/2 - offset, -alto/2 - offset);
-
 }
 
 
@@ -41,21 +41,18 @@ function cardioide(factor, d, offset){
 var d = 1/300;
 var factor = document.getElementById("factor").value;
 var vel = document.getElementById("velocidad").value;
-console.log(factor, vel)
 var offset = 0.3;
-function animar(){
+function animar_cardioide(){
+	vel = parseFloat(document.getElementById("velocidad").value);
+	factor = parseFloat(document.getElementById("factor").value) + vel;
 	requestAnimationFrame(animar);
 	ctx.clearRect(0,0,ancho, alto);
-
 	circulo();
 	cardioide(factor,d, 0);
 	cardioide(factor,d,offset);
-	vel = parseFloat(document.getElementById("velocidad").value);
-	factor = parseFloat(document.getElementById("factor").value) + vel;
 	document.getElementById("factor").value = factor.toString();
-
 }
 
 
-animar();
+animar_cardioide();
 

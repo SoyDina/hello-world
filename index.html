@@ -16,11 +16,24 @@
     </header>
 
     <div class="texto">
-      <p>Hola! Soy Tomás Di Nápoli, mejor conocido como "Dina", bienvenide a mi (intento de) página web.</p>
-
+      <p>
+        Hola! Soy Tomás Di Nápoli, mejor conocido como "Dina", bienvenide a mi (intento de) página web.
+      </p>
+      <p>
+        Hice esta página para compartir cosas que me gustan y me parecen curiosas, pero principalmente para aprender 
+        a un poco de HTML, JavaScript, CSS y <a href="https://github.com/SoyDina/soydina.github.io">Git</a>. 
+        Es la primera vez que hago una página así que si tienen sugerencias de lo que sea son bienvenidas.
+      </p>
+      <p>
+        Para estrenar la página se me ocurrió hacer algo que combine tres cosas que me gustan mucho: la física, la 
+        matemática y las animaciones flasheras. De esas tres cosas salió la animación que se ve abajo, a la que pueden 
+        cambiarle los parámetros "Tabla" y "Velocidad" para ver las distintas figuras que se pueden formar. Si rompen algo,
+        simplemente vuelvan a cargar la página.
+      </p>
+      
       <div class="numCont">
         <div id="factorDiv">
-          <label for="factor" style="font: 20px Jazz">Factor: </label>
+          <label for="factor" style="font: 20px Jazz">Tabla: </label>
           <input type="number" min="-9999" max="9999" value="2" step="1" id="factor" name="factor"> 
         </div>
         <div id="velocidadDiv">
@@ -28,11 +41,50 @@
           <input type="range" min="-0.05" max="0.05" value="0" step="0.0001" id="velocidad" name="velocidad" class="slider"> 
         </div>
       </div>
-      <div id="canvasDiv">
-        <canvas id="Cardioide_animación" width="500" height="500"></canvas>
-        <script src="cardioid.js"></script>
+      <div id="cardioide_animacionDiv">
+        <canvas id="cardioide_animacion" width="500" height="500"></canvas>
       </div>
+      <p>
+        Bueno, si movieron la barra de velocidad entonces la parte de animaciones flasheras creo que ya quedó clara pero ¿Que 
+        tiene que ver esto con matemática y con física? Para responder eso les voy a mostrar algunos lugares en los que aparecen 
+        estas figuras y como se forman. 
+      </p>
+      <p>
+        Vieron que uno de los parámetros se llama "Tabla", esto no es una coincidencia: cada una de las figuras esta relacionada 
+        con una tabla de multiplicar. Para ver esto primero que nada pueden dibujar un círculo y marcar su borde en 10 partes iguales. 
+        IMAGEN
+      </p>
+      <div class="imagen" id="circulo_marcado"><img src="images/circulo_marcado.png" alt="circulo_marcado"></div>
+      <p>
+        Luego eligen una de las marcas como el número 0 y a la marca siguiente se le pone el 1, luego el 2 y asi hasta llegar a la ultima
+        marca, que en este caso va a ser el corresponda al número 9. Una vez que ya estan todas numeradas se puede seguir, poniendo el 10 arriba
+        del 0, luego el 11 arriba del 1 y asi hasta el número que quieran.
+        IMAGEN
+      </p>
+      <div class="imagen" id="circulo_enumerado"><img src="images/circulo_enumerado.png" alt="circulo_enumerado"></div>
+      <p>
+        Ahora viene la parte de las tablas, por poner un ejemplo voy a usar la tabla del 2. Lo que hay que hacer es arrancar desde el 1 y multiplicarlo
+        por el número que eligieron, en mi caso calculo 1x2=2, entonces lo que hago es unir la marca que corresponde al 1 con la marca que corresponde 
+        al 2. Después hago lo mismo con el 2: calculo 2x2=4 entonces uno la marca del 2 con la del 4, luego 3x2=4 y así con el resto. Entonces la figura
+        que se forma haciendo 10 marcas en el borde del círculo y usando la tabla del 2 es la siguiente:
+        IMAGEN
+      </p>
+      <div class="imagen" id="circulo_unido"><img src="images/circulo_unido.png" alt="circulo_unido"></div>
+      <p>
+        No se parece ni un poco a la del principio. Pero esto es porque sólo lo hice con 10 marcas, fijense que pasa si aumentan la cantidad de marcas.
+        SCRIPT 
+      </p>
+      <div class="numCont">
+        <label for="marcas">Marcas: </label>
+        <input type="number" min="1" max="100" value="10" step="1" id="marcas" name="marcas">
+      </div>
+      <div id="cardioide_animacionDiv">
+        <canvas id="cardioide_explicacion" width="550" height="550"></canvas>
+      </div>
+      <p>
+        próximo párrafo
+      </p>
+      <script src="animaciones.js"></script>
     </div>
-
   </body>
 </html>
