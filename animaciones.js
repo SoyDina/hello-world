@@ -95,22 +95,26 @@ var vel_ex = 0;
 var offset_ex = 0;
 var azul_ex = 0;
 var verde_ex = 0;
-var marcas_ex = document.getElementById("marcas").value;
+var marcas_ex = 0;
 var d_ex = 1/marcas_ex;
 function cardioide_explicacion(){
-    ctx_ex.clearRect(0,0,ancho_ex, alto_ex);
+	ctx_ex.clearRect(0,0,ancho_ex, alto_ex);
+	marcas_ex = document.getElementById("marcas").value;
+	d_ex = 1 / marcas_ex;
     ctx_ex.lineWidth = 2;
     circulo(ctx_ex, factor_ex, offset_ex, ancho_ex, alto_ex, radio_ex, azul_ex, verde_ex);
     cardioide(ctx_ex, factor_ex, d_ex, offset_ex, ancho_ex, alto_ex, radio_ex, azul_ex, verde_ex);
     marcar(ctx_ex, d_ex, offset_ex, alto_ex, alto_ex, radio_ex);
 	enumerar(ctx_ex, d_ex, ancho_ex, alto_ex, radio_ex);
-	marcas_ex = document.getElementById("marcas").value;
-	d_ex = 1 / marcas_ex;
+	
 }
 
 function animar(){
-    cardioide_animacion();
-    cardioide_explicacion();
+	cardioide_animacion();
+	if(marcas_ex != document.getElementById("marcas").value){
+		cardioide_explicacion();
+		console.log("hola");
+	}
     requestAnimationFrame(animar);
 }
 

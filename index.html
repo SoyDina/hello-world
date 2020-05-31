@@ -35,19 +35,24 @@
         <div id="factorDiv">
           <label for="factor" style="font: 20px Jazz">Tabla: </label>
           <input type="number" min="-9999" max="9999" value="2" step="1" id="factor" name="factor"> 
+          <button type="button" id="factorUp" onclick="factorUp()">+1</button>
+          <button type="button" id="factorDown" onclick="factorDown()">-1</button>
         </div>
         <div id="velocidadDiv">
           <label for="velocidad" style="font: 20px Jazz;">Velocidad:</label>
           <input type="range" min="-0.05" max="0.05" value="0" step="0.0001" id="velocidad" name="velocidad" class="slider"> 
+        </div>
+        <div id="velocidadDiv">
+          <button type="button" id="reset" onclick="logear()">reset</button>
         </div>
       </div>
       <div id="cardioide_animacionDiv">
         <canvas id="cardioide_animacion" width="500" height="500"></canvas>
       </div>
       <p>
-        Bueno, si movieron la barra de velocidad entonces la parte de animaciones flasheras creo que ya quedó clara pero ¿Que 
+        Bueno, si movieron la barra de velocidad la parte de animaciones flasheras creo que ya quedó clara pero ¿Que 
         tiene que ver esto con matemática y con física? Para responder eso les voy a mostrar algunos lugares en los que aparecen 
-        estas figuras y como se forman. 
+        estas figuras y cómo se forman. 
       </p>
       <p>
         Vieron que uno de los parámetros se llama "Tabla", esto no es una coincidencia: cada una de las figuras esta relacionada 
@@ -56,8 +61,8 @@
       </p>
       <div class="imagen" id="circulo_marcado"><img src="images/circulo_marcado.png" alt="circulo_marcado"></div>
       <p>
-        Luego eligen una de las marcas como el número 0 y a la marca siguiente se le pone el 1, luego el 2 y asi hasta llegar a la ultima
-        marca, que en este caso va a ser el corresponda al número 9. Una vez que ya estan todas numeradas se puede seguir, poniendo el 10 arriba
+        Luego eligen una de las marcas como el número 0 y a la marca siguiente le ponen el 1, luego el 2 y asi hasta llegar a la ultima
+        marca, que en este caso va a ser la que corresponda al número 9. Una vez que ya estan todas numeradas pueden seguir poniendo el 10 arriba
         del 0, luego el 11 arriba del 1 y asi hasta el número que quieran.
         IMAGEN
       </p>
@@ -76,15 +81,45 @@
       </p>
       <div class="numCont">
         <label for="marcas">Marcas: </label>
-        <input type="number" min="1" max="100" value="10" step="1" id="marcas" name="marcas">
+        <input type="range" min="1" max="100" value="10" step="1" id="marcas" name="marcas" class="slider">
       </div>
       <div id="cardioide_animacionDiv">
         <canvas id="cardioide_explicacion" width="550" height="550"></canvas>
       </div>
       <p>
-        próximo párrafo
+        Todas estas figuras estan relacionadas, de hecho son una familia de figuras: los epicicloides. La palabra epicicloide proviene de epiciclo, que
+        está compuesta por epi(encima, sobre) y ciclo(círculo). Las figuras que vieron hasta ahora estan todas adentro de un círculo, no encima de él,
+        así que no parecen tener mucha relación con su etimología. Sin embargo, los griegos le pusieron ese nombre por algo: hay otra forma de generar
+        estas figuras. La forma "original" constaba en trazar la curva que dibuja un punto en el borde de un círculo mientras rueda sobre
+        otro círculo. Esto suena un poco confuso, así que mejor veanlo con la siguiente animación.
       </p>
-      <script src="animaciones.js"></script>
+      <div id="radioDiv">
+        <label for="radio" style="font: 20px Jazz;">Radio:</label>
+        <input type="range" min="1" max="120" value="120" step="0.01" id="radio" name="radio" class="slider"> 
+      </div>
+      <div id="relacionDiv">
+        <h4 id="relacion" style="font: 20px Jazz;">Relación entre radios: 1</h4>
+        <button id="relacionUp" onclick="relacionUp()">+</button>
+        <button id="relacionDown" onclick="relacionDown()">-</button>
+      </div>
+      <div id="epicicloidesDiv">
+        <canvas id="epicicloides" width="750" height="720"></canvas>
+      </div>
+      <p>
+        La relación entre los radios es la división entre el radio del círculo que rueda y el círculo que está fijo, cuando ambos son iguales este número es 1.
+        Si la relación es 1, al apretar el botón "-" ésta pasa a ser 1/2=0,5 luego 1/3=0,333... y así sucesivamente, con el botón "+" el número que está dividiendo
+        disminuye en vez de aumentar. Estas relaciones son particulares porque cada una forma una curva que se corresponde con una tabla de multiplicar de las animaciones
+        anteriores, por ejemplo la relación 1 se corresponde con la tabla del 2, 1/2 con la del 3, 1/3 con la del 4, etc. Fijensé que si la relación es 1/n entonces el 
+        punto que estamos siguiendo toca n veces al círculo interior ¿Por qué creen que pasa esto?. Además, la curva sólo vuelve al punto inicial despues de dar una vuelta 
+        si las relaciones tienen esta pinta, si no "no se cierran".
+      </p>
+      <p>
+        Acá es cuando empieza a aparecer la física de todo esto.
+        Los griegos usaban estas curvas para describir el movimiento de los planetas. Estos eran así porque antes el modelo del sistema solar era geocéntrico,
+        se describian los movimientos de los planetas y las estrellas respecto de la tierra y no respecto del sol como lo hacemos ahora. Esta forma de pensar
+        al sistema solar y al universo fue ideada por Claudio Ptolomeo(c.100-c.170) y la dejó registrada en su obra Almagesto.  
+      </p>
+      <script src="animaciones_objeto.js"></script>
     </div>
   </body>
 </html>
