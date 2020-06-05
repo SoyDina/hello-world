@@ -16,10 +16,10 @@
     </header>
 
     <div class="texto">
-      <p>
+      <p id="yo">
         Hola! Soy Tomás Di Nápoli, mejor conocido como "Dina", bienvenide a mi (intento de) página web.
       </p>
-      <p>
+      <p id="yo">
         Hice esta página para compartir cosas que me gustan y me parecen curiosas, pero principalmente para aprender 
         a un poco de HTML, JavaScript, CSS y <a href="https://github.com/SoyDina/soydina.github.io">Git</a>. 
         Es la primera vez que hago una página así que si tienen sugerencias de lo que sea son bienvenidas.
@@ -56,15 +56,13 @@
       </p>
       <p>
         Vieron que uno de los parámetros se llama "Tabla", esto no es una coincidencia: cada una de las figuras esta relacionada 
-        con una tabla de multiplicar. Para ver esto primero que nada pueden dibujar un círculo y marcar su borde en 10 partes iguales. 
-        IMAGEN
+        con una tabla de multiplicar. Para ver esto primero que nada pueden dibujar un círculo y marcar su borde en 10 partes iguales.
       </p>
       <div class="imagen" id="circulo_marcado"><img src="images/circulo_marcado.png" alt="circulo_marcado"></div>
       <p>
         Luego eligen una de las marcas como el número 0 y a la marca siguiente le ponen el 1, luego el 2 y asi hasta llegar a la ultima
         marca, que en este caso va a ser la que corresponda al número 9. Una vez que ya estan todas numeradas pueden seguir poniendo el 10 arriba
-        del 0, luego el 11 arriba del 1 y asi hasta el número que quieran.
-        IMAGEN
+        del 0, luego el 11 arriba del 1 y así hasta el número que quieran.
       </p>
       <div class="imagen" id="circulo_enumerado"><img src="images/circulo_enumerado.png" alt="circulo_enumerado"></div>
       <p>
@@ -72,12 +70,10 @@
         por el número que eligieron, en mi caso calculo 1x2=2, entonces lo que hago es unir la marca que corresponde al 1 con la marca que corresponde 
         al 2. Después hago lo mismo con el 2: calculo 2x2=4 entonces uno la marca del 2 con la del 4, luego 3x2=4 y así con el resto. Entonces la figura
         que se forma haciendo 10 marcas en el borde del círculo y usando la tabla del 2 es la siguiente:
-        IMAGEN
       </p>
       <div class="imagen" id="circulo_unido"><img src="images/circulo_unido.png" alt="circulo_unido"></div>
       <p>
         No se parece ni un poco a la del principio. Pero esto es porque sólo lo hice con 10 marcas, fijense que pasa si aumentan la cantidad de marcas.
-        SCRIPT 
       </p>
       <div class="numCont">
         <label for="marcas">Marcas: </label>
@@ -87,7 +83,7 @@
         <canvas id="cardioide_explicacion" width="550" height="550"></canvas>
       </div>
       <p>
-        Todas estas figuras estan relacionadas, de hecho son una familia de figuras: los epicicloides. La palabra epicicloide proviene de epiciclo, que
+        Todas estas figuras estan relacionadas, de hecho son una familia de figuras: las epicicloides. La palabra epicicloide proviene de epiciclo, que
         está compuesta por epi(encima, sobre) y ciclo(círculo). Las figuras que vieron hasta ahora estan todas adentro de un círculo, no encima de él,
         así que no parecen tener mucha relación con su etimología. Sin embargo, los griegos le pusieron ese nombre por algo: hay otra forma de generar
         estas figuras. La forma "original" constaba en trazar la curva que dibuja un punto en el borde de un círculo mientras rueda sobre
@@ -115,9 +111,34 @@
       </p>
       <p>
         Acá es cuando empieza a aparecer la física de todo esto.
-        Los griegos usaban estas curvas para describir el movimiento de los planetas. Estos eran así porque antes el modelo del sistema solar era geocéntrico,
-        se describian los movimientos de los planetas y las estrellas respecto de la tierra y no respecto del sol como lo hacemos ahora. Esta forma de pensar
-        al sistema solar y al universo fue ideada por Claudio Ptolomeo(c.100-c.170) y la dejó registrada en su obra Almagesto.  
+        Los griegos usaban estas curvas para describir el movimiento de los planetas. Sin embargo ahora sabemos que los planetas se mueven casi en círculos alrededor del
+        sol, entonces ¿Qué cambió?. La diferencia es que antes el modelo del sistema solar era geocéntrico, se describian los movimientos de los planetas y las estrellas
+        respecto de la tierra y no respecto del sol como lo hacemos ahora. Esta forma de pensar al sistema solar y al universo fue ideada por <a href="https://es.wikipedia.org/wiki/Claudio_Ptolomeo">Ptolomeo</a>(c.100-c.170) y la 
+        dejó registrada en su obra <a href="https://es.wikipedia.org/wiki/Almagesto">Almagesto</a>.  
+      </p>
+      <div id="geocentrigif">
+        <a href="https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.fogonazos.es%2F2016%2F02%2Fel-otro-gif-para-entender-el.html&psig=AOvVaw3qcUlk63JV0AuXY-PvGRsT&ust=1591279633146000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMiBkd3o5ekCFQAAAAAdAAAAABAN">
+          <img src="https://thonyc.files.wordpress.com/2016/01/tumblr_o0k7mkhnsn1uk13a5o1_500.gif?w=500&h=290" alt="gif_geocentrico">
+        </a>
+      </div>
+      <p>
+        No es necesario irse tan lejos para que estas figuras aparezcan en la naturaleza, las tenemos justo abajo de nuestras narices cada vez que desayunamos. Las 
+        reflexiones de los rayos de luz en las paredes de las tazas se juntan en los puntos justos para formar estas curvas.
+      </p>
+      <div class="imagenes-tazas">
+        <div class="cardioide-solo"><img id="img-cardioide-solo" src="images/cardioide_solo.jpg" alt="cardioide-solo"></div>
+        <div class="nefroide"><img id="img-nefroide" src="images/nefroide.jpg" alt="nefroide"></div>
+        <div class="cardioides"><img src="images/cardioides.jpg" alt="cardioides" id="img-cardioides"></div>
+      </div>
+      <p>
+        El motivo por el cual se forman estas curvas en las tazas es muy parecido al método de las tablas de multiplicar que les mostré al principio, pero para explicarlo
+        se necesita matemática un poco mas avanzada, así que quizás lo comparta en otra actualización de la página.
+      </p>
+      <p>
+        Todo lo que les mostré hasta ahora tiene que ver con epiciloides, pero me parece que son lo menos importante. Con lo que espero que se queden de todo lo que conté 
+        es con una intuición de las relaciones increibles que pueden existir entre la matemática y la física. Cómo algo tan simple como las tablas de multiplicar puede 
+        tener que ver con algo tan enorme y lejano como los movimientos de los planetas vistos desde la tierra, o algo tan minúsculo y cotidiano como la reflexión de los 
+        rayos de luz en las tazas que usamos cada mañana.
       </p>
       <script src="animaciones_objeto.js"></script>
     </div>

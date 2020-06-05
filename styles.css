@@ -5,16 +5,23 @@
 
 #yo {
   display: block;
-  width:384px;
+  width: 100%;;
   margin: 50px auto;
-  font: 40px Jazz;
+  font: 30px Jazz;
 }
 
 p {
   display: block;
   width: 100%;
-  margin: 50px auto;
+  margin: auto;
   font: 22px Jazz;
+  text-align: justify;
+}
+
+.imagen{
+  display: flex;
+  justify-content: center;
+  margin: 0px;
 }
 
 .texto {
@@ -37,7 +44,7 @@ p {
 }
 
 body{
-  margin: 75px;
+  margin: 40px;
   background-color: beige;
 }
 
@@ -48,7 +55,7 @@ body{
   margin-right: auto;
   display: block;
   width: 500px;
-  height: 500px;
+  height: 550px;
 }
 
 #cadioide_explicacionDiv{
@@ -110,3 +117,49 @@ input{
   float: left;
 }
 
+.imagenes-tazas{
+  display: inline-block;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.cardioide-solo{
+  width: 49%;
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+}
+
+.nefroide{
+  width: 49%;
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+}
+
+.cardioides{
+  height: 40%;
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+}
+
+#img-cardioide-solo{
+  width: 100%;
+}
+
+#img-nefroide{
+  width: 100%;
+}
+
+#img-cardioides{
+  width: 100%;
+}
+
+#geocentrigif{
+  margin: 0px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
