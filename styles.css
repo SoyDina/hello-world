@@ -48,6 +48,10 @@ body{
   background-color: beige;
 }
 
+label{
+  font: 25px Jazz;
+}
+
 #cardioide_animacionDiv{
   padding-left: 0;
   padding-right: 0;
@@ -79,9 +83,19 @@ body{
 }
 
 input{
+  -webkit-appearance: none;
   width: 50px;
-  height: 20px;
-  outline: 1px solid black;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: lightgray;
+  font: 130% Jazz;
+  text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 .slidercontainer{
@@ -90,14 +104,28 @@ input{
 
 .slider{
   -webkit-appearance: none;  /* Override default CSS styles */
+  display: inline-block;
   appearance: none;
   width: 250px; /* Full-width */
   height: 20px; /* Specified height */
-  background: white; /* Grey background */
-  outline: 1px solid black; /* Remove outline */
+  background: lightgrey; /* Grey background */
+  border-radius: 10px;
+  outline: none; /* Remove outline */
   opacity: 1; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
   transition: opacity .2s;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background: brown;
+  cursor: pointer;
 }
 
 #factorDiv{
@@ -166,18 +194,19 @@ input{
 
 .button{
   background-color: brown;
-  padding: 10px 10px;
+  padding: 20px 20px;
   border: black;
   color: white;
   text-align: center;
   display: inline-block;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 #relacion{
   font: 20px Jazz;
   display: inline-block;
-  width: 380px;
+  width: 480px;
 }
 
 #relacionUp{
@@ -188,7 +217,7 @@ input{
   cursor: pointer;
   font-size: 25px;
   text-align: center;
-  padding: 5px 10px;
+  padding: 10px 15px;
 }
 
 #relacionDown{
@@ -199,5 +228,5 @@ input{
   cursor: pointer;
   font-size: 25px;
   text-align: center;
-  padding: 5px 14px;
+  padding: 10px 19px;
 }
