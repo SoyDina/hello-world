@@ -21,7 +21,7 @@
       </p>
       <p id="yo">
         Hice esta página para compartir cosas que me gustan y me parecen curiosas, pero principalmente para aprender 
-        a un poco de HTML, JavaScript, CSS y <a href="https://github.com/SoyDina/soydina.github.io">Git</a>. 
+        un poco de HTML, JavaScript, CSS y <a href="https://github.com/SoyDina/soydina.github.io">Git</a>. 
         Es la primera vez que hago una página así que si tienen sugerencias de lo que sea son bienvenidas.
       </p>
       <p>
@@ -35,15 +35,12 @@
         <div id="factorDiv">
           <label for="factor" style="font: 20px Jazz">Tabla: </label>
           <input type="number" min="-9999" max="9999" value="2" step="1" id="factor" name="factor"> 
-          <button type="button" id="factorUp" onclick="factorUp()">+1</button>
-          <button type="button" id="factorDown" onclick="factorDown()">-1</button>
+          <button type="button" class="button" id="factorUp" onclick="factorUp()">+1</button>
+          <button type="button" class="button" id="factorDown" onclick="factorDown()">-1</button>
         </div>
         <div id="velocidadDiv">
           <label for="velocidad" style="font: 20px Jazz;">Velocidad:</label>
-          <input type="range" min="-0.05" max="0.05" value="0" step="0.0001" id="velocidad" name="velocidad" class="slider"> 
-        </div>
-        <div id="velocidadDiv">
-          <button type="button" id="reset" onclick="logear()">reset</button>
+          <input type="range" min="0" max="0.1" value="0" step="0.0001" id="velocidad" name="velocidad" class="slider"> 
         </div>
       </div>
       <div id="cardioide_animacionDiv">
@@ -67,8 +64,8 @@
       <div class="imagen" id="circulo_enumerado"><img src="images/circulo_enumerado.png" alt="circulo_enumerado"></div>
       <p>
         Ahora viene la parte de las tablas, por poner un ejemplo voy a usar la tabla del 2. Lo que hay que hacer es arrancar desde el 1 y multiplicarlo
-        por el número que eligieron, en mi caso calculo 1x2=2, entonces lo que hago es unir la marca que corresponde al 1 con la marca que corresponde 
-        al 2. Después hago lo mismo con el 2: calculo 2x2=4 entonces uno la marca del 2 con la del 4, luego 3x2=4 y así con el resto. Entonces la figura
+        por el número que eligieron, en mi caso calculo <b>1</b>x2=<b>2</b>, entonces lo que hago es unir la marca que corresponde al 1 con la marca que corresponde 
+        al 2. Después hago lo mismo con el 2: calculo <b>2</b>x2=<b>4</b> entonces uno la marca del 2 con la del 4, luego <b>3</b>x2=<b>6</b> y así con el resto. Entonces la figura
         que se forma haciendo 10 marcas en el borde del círculo y usando la tabla del 2 es la siguiente:
       </p>
       <div class="imagen" id="circulo_unido"><img src="images/circulo_unido.png" alt="circulo_unido"></div>
@@ -94,9 +91,9 @@
         <input type="range" min="1" max="120" value="120" step="0.01" id="radio" name="radio" class="slider"> 
       </div>
       <div id="relacionDiv">
-        <h4 id="relacion" style="font: 20px Jazz;">Relación entre radios: 1</h4>
-        <button id="relacionUp" onclick="relacionUp()">+</button>
-        <button id="relacionDown" onclick="relacionDown()">-</button>
+        <h4 id="relacion">Relación entre radios: 1</h4>
+        <button id="relacionUp" class="button" onclick="relacionUp()">+</button>
+        <button id="relacionDown" class="button" onclick="relacionDown()">-</button>
       </div>
       <div id="epicicloidesDiv">
         <canvas id="epicicloides" width="750" height="720"></canvas>

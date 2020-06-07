@@ -163,3 +163,41 @@ input{
   display: flex;
   justify-content: center;
 }
+
+.button{
+  background-color: brown;
+  padding: 10px 10px;
+  border: black;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#relacion{
+  font: 20px Jazz;
+  display: inline-block;
+  width: 380px;
+}
+
+#relacionUp{
+  background-color: brown;
+  border: black;
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 25px;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+#relacionDown{
+  background-color: brown;
+  border: black;
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 25px;
+  text-align: center;
+  padding: 5px 14px;
+}
